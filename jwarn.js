@@ -21,9 +21,9 @@
 			}
 		});
 	}
-    $.fn.jwarnMin = function(options) {
-    	var obj = this;
-    	this.blur(function() {
+	$.fn.jwarnMin = function(options) {
+		var obj = this;
+		this.blur(function() {
 			if (obj.val().length === 0) {
 				$('#' + options.div).html("<p style='color: red;'>" + options.emptyMessage + "</p>");
 				states[obj.attr("id")] = false;
@@ -37,11 +37,11 @@
 	    		}
 	    	}
 	    	assert();
-    	});
-    }
-    $.fn.jwarnEmail = function(options) {
-    	var obj = this;
-    	this.blur(function() {
+		});
+	}
+	$.fn.jwarnEmail = function(options) {
+		var obj = this;
+		this.blur(function() {
 			if (obj.val().length === 0) {
 				$('#' + options.div).html("<p style='color: red;'>" + options.emptyMessage + "</p>");
 				states[obj.attr("id")] = false;
@@ -56,11 +56,11 @@
 	    		}
 	    	}
 	    	assert();
-    	});
-    }
+		});
+	}
 	$.fn.jwarnUrl = function(options) {
-    	var obj = this;
-    	this.blur(function() {
+		var obj = this;
+		this.blur(function() {
 			if (obj.val().length === 0) {
 				$('#' + options.div).html("<p style='color: red;'>" + options.emptyMessage + "</p>");
 				states[obj.attr("id")] = false;
@@ -75,6 +75,6 @@
 	    		}
 	    	}
 	    	assert();
-    	});
-    }
+		});
+	}
 }(jQuery));
