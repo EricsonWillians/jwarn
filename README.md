@@ -63,6 +63,24 @@ An URL field:
 </script>
 ```
 
+Using it for validation (Considering the previous examples, and the existence of a button):
+
+```
+<script>
+  <button class="btn btn-primary btn-xl" id="contact-submit">Submit</button>
+  $(document).ready(function() {
+    $.jvalSetup([
+        "contact-name",
+        "contact-email",
+        "contact-facebook"
+    ]);
+    $("#contact-submit").jval();
+  }
+</script>
+```
+
+Setting the ids up causes each jwarn to validate on blur, disabling the given button if any of the given ids is false (Empty or invalid).
+
 ## Contributing
 
 1. Fork it!
@@ -73,8 +91,8 @@ An URL field:
 
 ## Credits
 
-Me, myself, boredom, coffee and smokes.
+Me, myself, coffee and smokes.
 
 ## License
 
-Apache Licence.
+GNU GENERAL PUBLIC LICENSE.
